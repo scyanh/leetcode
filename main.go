@@ -9,9 +9,9 @@ func main() {
 	fmt.Println("hello")
 
 	//str:="00110011"
-	str:="01"
+	str:="clementisacap"
 
-	res := stringschallenge.NewStringsChallenge().CountBinarySubStrings(str)
+	res := stringschallenge.NewStringsChallenge().LongestSubstringWithoutDuplication(str)
 	fmt.Println("res=", res)
 
 }
