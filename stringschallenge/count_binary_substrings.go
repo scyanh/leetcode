@@ -1,9 +1,9 @@
 package stringschallenge
 
-type stringsChallenge struct {
+type countBinarySubstrings struct {
 }
 
-func NewStringsChallenge() *stringsChallenge {
+func NewcountBinarySubstrings() *stringsChallenge {
 	return &stringsChallenge{}
 }
 
