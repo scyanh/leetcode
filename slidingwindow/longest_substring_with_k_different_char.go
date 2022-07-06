@@ -14,24 +14,21 @@ func (slidingWindowChallenge) LongestSubstringWithKDistinctCharacters(s string, 
 
 	left := 0 // left pointer
 	res := 0 // result
-	count := 0 // count of distinct characters
 	m := make(map[rune]int) // map of characters and their counts
 
-	for i := 0; i < n; i++ { // iterate through string
-		r := rune(s[i]) // convert character to rune
-		if _, ok := m[r]; ok { // if character is already in map
-			m[r]++ // increment count
+	for i, el := range s { // iterate through string
+		if _, ok := m[el]; ok { // if character is already in map
+			m[el]++ // increment char in map
 		} else {
-			m[r] = 1 // else add new character to map
-			count++ // increment count
+			m[el] = 1 // else add new character to map
 		}
 
-		for count > k { // if count is greater than k
+		for len(m) > k { // if count is greater than k
 			r := rune(s[left]) // convert character to rune
 			if _, ok := m[r]; ok { // if character is already in map
 				m[r]-- // decrement count
 				if m[r] == 0 {
-					count-- // decrement count
+					delete(m, r) // delete character from map
 				}
 			}
 			left++ // move left pointer

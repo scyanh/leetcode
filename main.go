@@ -11,10 +11,10 @@ func main() {
 	//str:="00110011"
 	//str:="clementisacap"
 	//input := []int{2, 3, 1, 2, 4, 3}
-	input:="araaci"
-	k := 2
+	input:=[]string{"A","B","C","A","C"}
+	//k := 2
 
-	res := slidingwindow.NewSlidingWindowChallenge().LongestSubstringWithKDistinctCharacters(input, k)
+	res := slidingwindow.NewSlidingWindowChallenge().MaxFruitsIntoBasket(input)
 	fmt.Println("res=", res)
 
 }
