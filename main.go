@@ -10,10 +10,11 @@ func main() {
 
 	//str:="00110011"
 	//str:="clementisacap"
-	input := []int{2, 3, 1, 2, 4, 3}
-	k := 7
+	//input := []int{2, 3, 1, 2, 4, 3}
+	input:="araaci"
+	k := 2
 
-	res := slidingwindow.NewSlidingWindowChallenge().FindSmallestSubarrayWithGivenSum(input, k)
+	res := slidingwindow.NewSlidingWindowChallenge().LongestSubstringWithKDistinctCharacters(input, k)
 	fmt.Println("res=", res)
 
 }
