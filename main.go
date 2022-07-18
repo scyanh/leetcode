@@ -14,9 +14,10 @@ func main() {
 	//input:=[]string{"A","B","C","A","C"}
 	//k := 2
 
-	x := 121
+	//x := 121
+	s:="LVIII"
 
-	res := stringschallenge.NewStringsChallenge().IsPalindrome(x)
+	res := stringschallenge.NewStringsChallenge().RomanToInteger(s)
 	fmt.Println("res=", res)
 
 }
